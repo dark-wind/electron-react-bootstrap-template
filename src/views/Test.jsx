@@ -4,7 +4,7 @@ class Test extends Component {
   render() {
     return (
       <div className="content">
-            fjaslifjasiofujioasdjoi
+            简单的首页可以加快访问速度
       </div>
     );
   }

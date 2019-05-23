@@ -4,7 +4,7 @@ import { Route, Switch } from "react-router-dom";
 import AdminNavbar from "../components/Navbars/AdminNavbar";
 import Sidebar from "../components/Sidebar/Sidebar";
 import routes from "../routes";
-import image from "../assets/img/sidebar-3.jpg";
+import image from "../assets/img/sidebar-2.jpg";
 
 class Admin extends Component {
   constructor(props) {
