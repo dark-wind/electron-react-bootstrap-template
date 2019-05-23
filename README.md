@@ -1,5 +1,20 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## 结构说明
+
+集成bootstrap,react,electron
+
+electron和react是完全独立的个体,通过访问react的单页面入口,达到集成和解耦的目的
+
+## 特殊的
+
+本地3000端口被占用.所以配置文件写的30001
+
+修改 开发/部署 环境:修改package.json下的
+```
+"devMode": true,
+```
+
 ## Available Scripts
 
 In the project directory, you can run:
