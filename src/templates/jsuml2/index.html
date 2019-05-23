@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link type='text/css' rel='stylesheet' href='css/UDStyle.css' media='screen'/>
+        <script type="text/javascript" src="UDCore.js"></script>
+        <script type="text/javascript" src="UDModules.js"></script>
+        <script type="text/javascript" src="UDApplication.js"></script>
+    <title>Document</title>
+    <script type="text/javascript">
+        window.onload = function() {
+                    var width = screen.availWidth - 250;
+                  var height = screen.availHeight;
+  
+                  if(width < 400)  width = width+250;
+                  if(width > 1000) width = 1000;
+  
+          var app = new Application( { id: 'umldiagram', width: width, height: height } );  
+        }
+      </script>
+</head>
+<body>
+  
+  <font>啊。。。。。。洗吧勒～～终于让我趴下来了</font>
+  <br>
+  <font>虽然长得老古董，但是这是我看的几十个里面。。分类最清楚的一个</font>
+  
+  <div id="umldiagram" >
+  </div>
+ 
+  <div id="debug"></div> 
+</body>
+</html>

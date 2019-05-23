@@ -7,26 +7,32 @@ const pkg = require('./package.json')
 // 垃圾回收的时候，window对象将会自动的关闭
 let win
 
-function createWindow () {
+function createWindow() {
   // 创建浏览器窗口。
   win = new BrowserWindow({
     width: 800,
     height: 600,
+    autoHideMenuBar: true,
+    fullscreenable: false,
     webPreferences: {
-      nodeIntegration: true
+      javascript: true,
+      plugins: true,
+      nodeIntegration: false, // 不集成 Nodejs
+      webSecurity: false,
+      preload: path.join(__dirname, './public/renderer.js') // 但预加载的 js 文件内仍可以使用 Nodejs 的 API
     }
   })
 
   // 加载index.html文件
   if (pkg.devMode)
-    win.loadURL('http://localhost:3001/')
+     win.loadURL('http://localhost:3001/')
   else
     win.loadURL(url.format({
       pathname: path.join(__dirname, './build/index.html'),
       protocol: 'file:',
       slashes: true
     }))
-  
+
 
   // 打开开发者工具
   win.webContents.openDevTools()

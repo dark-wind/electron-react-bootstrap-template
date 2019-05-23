@@ -10,6 +10,7 @@ import "./assets/css/demo.css";
 import "./assets/css/pe-icon-7-stroke.css";
 
 import AdminLayout from "./layouts/Admin";
+import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <BrowserRouter>
@@ -20,3 +21,4 @@ ReactDOM.render(
   </BrowserRouter>,
   document.getElementById("root")
 );
+serviceWorker.unregister();

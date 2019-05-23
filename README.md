@@ -15,6 +15,13 @@ electron和react是完全独立的个体,通过访问react的单页面入口,达
 "devMode": true,
 ```
 
+## 运行
+```
+yarn install 
+yarn start
+yarn electron-start
+```
+
 ## Available Scripts
 
 In the project directory, you can run:
