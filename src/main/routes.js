@@ -1,4 +1,4 @@
-import Test from "./views/Test";
+import Tools from "./views/Tools";
 import Welcome from "./views/Welcome";
 
 const dashboardRoutes = [
@@ -10,10 +10,10 @@ const dashboardRoutes = [
     layout: "/admin"
   },
   {
-    path: "/test",
-    name: "test",
+    path: "/tools",
+    name: "tools",
     icon: "pe-7s-rocket",
-    component: Test,
+    component: Tools,
     layout: "/admin"
   }
   

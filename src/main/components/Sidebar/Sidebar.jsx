@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 import AdminNavbarLinks from "../Navbars/AdminNavbarLinks.jsx";
 
-import logo from "../../assets/img/reactlogo.png";
+import logo from "../../assets/img/ghost.png";
 
 class Sidebar extends Component {
   constructor(props) {
@@ -40,7 +40,7 @@ class Sidebar extends Component {
           )}
         <div className="logo">
           <a
-            href="https://www.creative-tim.com?ref=lbd-sidebar"
+            href="https://github.com/dark-wind"
             className="simple-text logo-mini"
           >
             <div className="logo-img">
@@ -48,10 +48,10 @@ class Sidebar extends Component {
             </div>
           </a>
           <a
-            href="https://www.creative-tim.com?ref=lbd-sidebar"
+            href="https://github.com/dark-wind"
             className="simple-text logo-normal"
           >
-            Creative Tim
+            Darkwind
           </a>
         </div>
         <div className="sidebar-wrapper">

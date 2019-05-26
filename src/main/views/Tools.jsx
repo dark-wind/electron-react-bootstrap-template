@@ -6,7 +6,7 @@ import {Alert} from 'react-bootstrap'
 const electron = window.electron;
 const { BrowserWindow } = electron.remote;
 
-class Test extends Component {
+class Tools extends Component {
   render() {
     return (
       <div className="content">
@@ -34,9 +34,6 @@ class Test extends Component {
                               win.loadFile('./src/templates/jsuml2/index.html')
                               win.show()
                             }}>uml工具</button>
-                                    <Alert  variant='dark'>
-    This is a  alert—check it out!
-  </Alert>
                         </div>
                       </div>
                     </Col>
@@ -123,4 +120,4 @@ class Test extends Component {
   }
 }
 
-export default Test;
+export default Tools;
