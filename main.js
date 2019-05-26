@@ -25,7 +25,7 @@ function createWindow() {
 
   // 加载index.html文件
   if (pkg.devMode)
-     win.loadURL('http://localhost:3001/')
+     win.loadURL('http://localhost:3000/')
   else
     win.loadURL(url.format({
       pathname: path.join(__dirname, './build/index.html'),

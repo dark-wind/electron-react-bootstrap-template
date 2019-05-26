@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { Grid, Row, Col } from "react-bootstrap";
 import Card from "../components/Card/Card";
+import {Alert} from 'react-bootstrap'
 
 const electron = window.electron;
-const BrowserWindow = electron.remote.BrowserWindow;
-const path = require('path')
+const { BrowserWindow } = electron.remote;
 
 class Test extends Component {
   render() {
@@ -27,13 +27,16 @@ class Test extends Component {
                     >
                       <div className="font-icon-detail">
                         <i className='pe-7s-network' />
-                        <div class="demo-controls">
-                          <button class="demo-button" onClick={()=>{
-                            let win = new BrowserWindow({ width: 400, height: 320 })
-                            win.on('close', () => { win = null })
-                            win.loadFile('./src/templates/jsuml2/index.html')
-                            win.show()
-                          }}>uml工具</button>
+                        <div className="demo-controls">
+                          <button className="demo-button" onClick={()=>{
+                              let win = new BrowserWindow({ width: 400, height: 320 })
+                              win.on('close', () => { win = null })
+                              win.loadFile('./src/templates/jsuml2/index.html')
+                              win.show()
+                            }}>uml工具</button>
+                                    <Alert  variant='dark'>
+    This is a  alert—check it out!
+  </Alert>
                         </div>
                       </div>
                     </Col>

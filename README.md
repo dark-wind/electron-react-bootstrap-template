@@ -1,25 +1,77 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# electron-react-bootstrap 模板
 
-## 结构说明
+**`集成electron + react + bootstrap`** 踩完了大多数集成的坑
+- 使用create-react-app构建
+- electron在主界面使用loadURL接入react
+- react中使用window.electron引入electron进行通信
 
-集成bootstrap,react,electron
+**`主界面引入light-bootstrap-dashboard主题`** 免去了自己写样式的麻烦
+- 使用react-bootstrap而不是直接使用的bootstrap
+- 单纯引入主题的样式文件,可以轻松剥离
 
-electron和react是完全独立的个体,通过访问react的单页面入口,达到集成和解耦的目的
+**`功能模块与主界面完全解耦, 使用子窗口开启`** 子窗口独立运行html,剥离react
+
+## 运行
+```
+yarn install 
+yarn start  // 运行react
+yarn electron-start    //运行electron
+```
+
+## 目录结构
+```
+|-- www
+    |-- .gitignore
+    |-- LICENSE
+    |-- README.md
+    |-- main.js           electron入口文件
+    |-- package.json
+    |-- yarn.lock
+    |-- public            暴露入口,尽量不修改  
+    |   |-- favicon.ico
+    |   |-- index.html
+    |   |-- manifest.json
+    |   |-- renderer.js
+    |-- src               所有的逻辑代码
+        |-- App.test.js
+        |-- index.js      主界面react入口文件
+        |-- routes.js
+        |-- serviceWorker.js
+        |-- main          主界面所有代码
+            |-- assets
+            |   |-- css
+            |   |-- fonts
+            |   |-- img
+            |   |-- sass
+            |-- components
+            |-- electron
+            |-- layouts
+            |-- templates
+            |-- views
+        |-- modules        所有的功能模块,与主界面解耦
+```
 
 ## 特殊的
-
-本地3000端口被占用.所以配置文件写的30001
 
 修改 开发/部署 环境:修改package.json下的
 ```
 "devMode": true,
 ```
 
-## 运行
+
+
+## 目录md重新生成
 ```
-yarn install 
-yarn start
-yarn electron-start
+$ pwd
+    Users/username/Documents/demo-project
+$ npm install mddir --save
+$ cd node_modules/mddir/src
+$ pwd
+    Users/username/Documents/node_modules/mddir/src
+$ ls
+    mddir.js
+$ node mddir "../../../"
+// Exports 'directoryList.md' in mddir/src folder
 ```
 
 ## Available Scripts
