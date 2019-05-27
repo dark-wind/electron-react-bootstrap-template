@@ -3,13 +3,11 @@
   "version": "0.1.0",
   "main": "main.js",
   "homepage": ".",
-  "devMode": true,
+  "devMode": false,
   "private": true,
   "dependencies": {
     "bootstrap": "3.3.7",
     "chartist": "0.10.1",
-    "electron": "^5.0.1",
-    "mddir": "^1.1.1",
     "node-sass": "4.12.0",
     "path": "^0.12.7",
     "react": "^16.8.6",
@@ -27,7 +25,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "electron-start": "electron ."
+    "electron-start": "electron .",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
+    "package-win32": "electron-packager . electron-react-bootstrap-template --overwrite --asar=true --platform=win32 --arch=ia32 --icon=public/ghost.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"electron-react-bootstrap-template\"",
+    "package-win64": "electron-packager . electron-react-bootstrap-template --overwrite --asar=true --platform=win32 --arch=x64 --icon=public/ghost.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"electron-react-bootstrap-template\"",
+    "package-linux": "electron-packager . electron-react-bootstrap-template --overwrite --asar=true --platform=linux --arch=x64 --icon=public/ghost.png --prune=true --out=release-builds"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -43,5 +45,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "electron": "^5.0.2",
+    "electron-packager": "^13.1.1"
   }
 }
