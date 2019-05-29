@@ -26,7 +26,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "electron-start": "electron .",
-    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=public/ghost.icns --prune=true --out=release-builds",
     "package-win32": "electron-packager . electron-react-bootstrap-template --overwrite --asar=true --platform=win32 --arch=ia32 --icon=public/ghost.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"electron-react-bootstrap-template\"",
     "package-win64": "electron-packager . electron-react-bootstrap-template --overwrite --asar=true --platform=win32 --arch=x64 --icon=public/ghost.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"electron-react-bootstrap-template\"",
     "package-linux": "electron-packager . electron-react-bootstrap-template --overwrite --asar=true --platform=linux --arch=x64 --icon=public/ghost.png --prune=true --out=release-builds"
